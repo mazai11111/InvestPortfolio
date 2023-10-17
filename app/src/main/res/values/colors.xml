@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="start_background">#21232F</color>
+    <color name="end_background">#2C2E3E</color>
+
+    <color name="win_color">#8ED957</color>
+    <color name="lose_color">#EE3870</color>
+
 </resources>
