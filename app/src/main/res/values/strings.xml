@@ -2,10 +2,13 @@
     <string name="app_name">mvp-example</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
     <string name="portfolio">Portfolio</string>
     <string name="cost">Cost</string>
     <string name="total_profit">Total profit</string>
     <string name="profitability">Profitability</string>
     <string name="change_per_day">Change per day</string>
+    <string name="title_activity_entry_point_view">EntryPointView</string>
+
+    <string name="loading">Loading</string>
 </resources>
