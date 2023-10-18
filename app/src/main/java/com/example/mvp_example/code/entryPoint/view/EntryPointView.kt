@@ -1,4 +1,4 @@
-package com.example.mvp_example.code.entryPoint
+package com.example.mvp_example.code.entryPoint.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

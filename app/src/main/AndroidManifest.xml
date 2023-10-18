@@ -17,7 +17,7 @@
             android:exported="false"
              />
         <activity
-            android:name=".code.entryPoint.EntryPointView"
+            android:name=".code.entryPoint.view.EntryPointView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
