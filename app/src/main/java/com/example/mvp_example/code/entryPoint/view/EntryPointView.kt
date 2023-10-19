@@ -4,7 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mvp_example.R
-import com.example.mvp_example.code.general_params_portfolio.DiContainer.portfolioParamsModule
+import com.example.mvp_example.code.asset_table.DIContainer.assetTableModule
+import com.example.mvp_example.code.general_params_portfolio.DIContainer.portfolioParamsModule
 import com.example.mvp_example.code.portfolio_menu.view.PortfolioMenuView
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -24,7 +25,8 @@ class EntryPointView : AppCompatActivity() {
         GlobalContext.startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@EntryPointView)
-            modules(listOf(portfolioParamsModule))
+            modules(listOf(portfolioParamsModule,
+                assetTableModule))
         }
     }
 
