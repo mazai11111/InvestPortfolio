@@ -53,43 +53,61 @@ class AssetTableView : Fragment(), IAssetTableView {
             tableLayout.removeAllViews()
 
             val firstRow:TableRow = _layout.firstRow
-            //val firstRow = layoutInflater.inflate(R.layout.first_asser_row, null) as TableRow
             tableLayout.addView(firstRow)
 
+
             for (view in views) {
-
                 val tableRow = layoutInflater.inflate(R.layout.asser_row, null) as TableRow
-                tableRow.setBackgroundColor(Color.parseColor(view.ColorBg))
 
-                val picture: ImageView = tableRow.findViewById(R.id.image_asset)
-                picture.setImageResource(view.ImageResource)
+                renderView(view, tableLayout, tableRow)
 
-                val nameFullAsset: TextView = tableRow.findViewById(R.id.name_full_asset)
-                nameFullAsset.text = view.Fullname
+                subImageToOpenAdditionalInfo(tableRow)
 
-                val nameShortAsset: TextView = tableRow.findViewById(R.id.name_short_asset)
-                nameShortAsset.text = view.ShortName
-
-                val countAsset: TextView = tableRow.findViewById(R.id.count_asset)
-                countAsset.text = view.Count
-
-                val currentPriseAsset: TextView = tableRow.findViewById(R.id.current_prise_asset)
-                currentPriseAsset.text = view.CurrentPrise
-
-                val summaryProfitAsset: TextView = tableRow.findViewById(R.id.sum_profit_asset)
-                summaryProfitAsset.text = view.SummaryProfit
-                summaryProfitAsset.setTextColor(Color.parseColor(view.Color));
-
-                val profitabilityPercentAsset: TextView = tableRow.findViewById(R.id.profitability_percent_asset)
-                profitabilityPercentAsset.text = view.Profitability
-                profitabilityPercentAsset.setTextColor(Color.parseColor(view.Color));
-
-                tableLayout.addView(tableRow)
-                _tableViews.add(tableLayout);
             }
         }
     }
 
+    private fun subImageToOpenAdditionalInfo(tableRow: TableRow){
+        val picture: ImageView = tableRow.findViewById(R.id.image_asset)
+        val nameFullAsset: TextView = tableRow.findViewById(R.id.name_full_asset)
+
+        //TO DO: unsub
+        picture.setOnClickListener {openAdditionalInfo(nameFullAsset.text.toString())}
+    }
+
+    private fun openAdditionalInfo(id:String){
+
+    }
+
+    private fun renderView(view:AssetTableDrawable, tableLayout: TableLayout, tableRow: TableRow){
+        tableRow.setBackgroundColor(Color.parseColor(view.ColorBg))
+
+        val picture: ImageView = tableRow.findViewById(R.id.image_asset)
+        picture.setImageResource(view.ImageResource)
+
+        val nameFullAsset: TextView = tableRow.findViewById(R.id.name_full_asset)
+        nameFullAsset.text = view.Fullname
+
+        val nameShortAsset: TextView = tableRow.findViewById(R.id.name_short_asset)
+        nameShortAsset.text = view.ShortName
+
+        val countAsset: TextView = tableRow.findViewById(R.id.count_asset)
+        countAsset.text = view.Count
+
+        val currentPriseAsset: TextView = tableRow.findViewById(R.id.current_prise_asset)
+        currentPriseAsset.text = view.CurrentPrise
+
+        val summaryProfitAsset: TextView = tableRow.findViewById(R.id.sum_profit_asset)
+        summaryProfitAsset.text = view.SummaryProfit
+        summaryProfitAsset.setTextColor(Color.parseColor(view.Color));
+
+        val profitabilityPercentAsset: TextView = tableRow.findViewById(R.id.profitability_percent_asset)
+        profitabilityPercentAsset.text = view.Profitability
+        profitabilityPercentAsset.setTextColor(Color.parseColor(view.Color));
+
+        tableLayout.addView(tableRow)
+        _tableViews.add(tableLayout);
+    }
 
     private fun initPresenter(){
         _presenter.attachView(this);
