@@ -9,6 +9,7 @@ class AssetTableDrawable {
     private val _summaryProfit:String;
     private val _profitability:String;
     private val _color:String;
+    private val _colorBg:String;
 
     public val ImageResource:Int
         get() = _imageResource;
@@ -24,6 +25,8 @@ class AssetTableDrawable {
         get() = _summaryProfit;
     public val Profitability:String
         get() = _profitability;
+    public val ColorBg:String
+        get() = _colorBg;
 
     public constructor(
         imageResource: Int,
@@ -33,7 +36,8 @@ class AssetTableDrawable {
         currentPrise: String,
         summaryProfit: String,
         profitability: String,
-        _color: String
+        _color: String,
+        _colorBg: String
     ) {
         this._imageResource = imageResource
         this._fullName = fullName
@@ -43,5 +47,6 @@ class AssetTableDrawable {
         this._summaryProfit = summaryProfit
         this._profitability = profitability
         this._color = _color
+        this._colorBg = _colorBg
     }
 }
