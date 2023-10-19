@@ -14,5 +14,8 @@
 
     <string name="profile_composition">Profile Composition</string>
     <string name="stocks">Stocks</string>
-    <string name="cryptocurrency">Сryptocurrency</string>
+    <string name="cryptocurrency">Сrypto</string>
+    <string name="bonds">Bonds</string>
+    <string name="assets">Assets</string>
+    <string name="all_assets">All assets</string>
 </resources>
