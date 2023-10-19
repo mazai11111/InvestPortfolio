@@ -24,4 +24,23 @@
     <string name="cur_prise">Cur.\nprise, $</string>
     <string name="sum_profit_dollar">Sum.\nprofit, $</string>
     <string name="profitability_percent">Profit.,\n%</string>
+    
+    <string name="date_of_first_transaction">Date of first transaction</string>
+    <string name="lot_size">Lot size</string>
+    <string name="total_shares">Total shares</string>
+    <string name="average_price_at_wholesale_position">Average price at wholesale position</string>
+    <string name="current_price">Current price</string>
+    <string name="pl_for_day">P/L for day</string>
+    <string name="current_value">Current value</string>
+    <string name="cost_of_purchases">Cost of purchases</string>
+    <string name="sales_value">Sales value</string>
+    <string name="category_share">Category share</string>
+    <string name="portfolio_share">Portfolio share</string>
+
+    <string name="current_profit">Current profit</string>
+    <string name="profit_on_transactions">Profit on transactions</string>
+    <string name="amount_of_dividends">Amount of dividends</string>
+    <string name="commissions">Commissions</string>
+
+    <string name="income">Income</string>
 </resources>
