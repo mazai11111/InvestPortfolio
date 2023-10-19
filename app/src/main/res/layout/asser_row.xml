@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_layout"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginBottom="5dp"
+    android:background="#192981"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coool"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/count_head2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="133"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/current_prise_head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="555$"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/sum_profit_head4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="234234$"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/profitability_percent_head5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34%"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</TableRow>

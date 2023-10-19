@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id = "@+id/profile_composition"
-        android:title="@string/profile_composition"
-        android:icon="@drawable/profile_composition_item"
-        android:orderInCategory="1"/>
+
     <item
         android:id = "@+id/stocks"
         android:icon="@drawable/stocks_icon"
         android:title="@string/stocks"
-        android:orderInCategory="3"/>
+        android:orderInCategory="2"/>
     <item
         android:id = "@+id/crypto"
         android:icon="@drawable/cryptocurrency_icon"
         android:title="@string/cryptocurrency"
-        android:orderInCategory="4"/>
+        android:orderInCategory="3"/>
     <item
         android:id = "@+id/bonds"
         android:icon="@drawable/baseline_money_24"
         android:title="@string/bonds"
-        android:orderInCategory="5"/>
+        android:orderInCategory="4"/>
     <item
         android:id = "@+id/assets"
         android:icon="@drawable/all_assets_icon"
         android:title="@string/all_assets"
-        android:orderInCategory="2"/>
+        android:orderInCategory="1"/>
 </menu>
