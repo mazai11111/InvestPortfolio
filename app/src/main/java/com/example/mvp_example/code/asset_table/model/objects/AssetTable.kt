@@ -1,6 +1,6 @@
 package com.example.mvp_example.code.asset_table.model.objects
 
-class AssetTable {
+open class AssetTable {
     private val _imageResource: Int
     private val _fullName:String;
     private val _shortName:String;

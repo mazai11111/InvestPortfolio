@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mvp_example.R
 import com.example.mvp_example.code.asset_table.DIContainer.assetTableModule
+import com.example.mvp_example.code.full_asset_info.Dicontainer.fullAssetInfoModel
 import com.example.mvp_example.code.general_params_portfolio.DI.portfolioParamsModule
 import com.example.mvp_example.code.portfolio_menu.view.PortfolioMenuView
 import org.koin.android.ext.koin.androidContext
@@ -27,7 +28,8 @@ class EntryPointView : AppCompatActivity() {
             androidContext(this@EntryPointView)
             modules(listOf(
                 assetTableModule,
-                portfolioParamsModule
+                portfolioParamsModule,
+                fullAssetInfoModel
             ))
         }
     }

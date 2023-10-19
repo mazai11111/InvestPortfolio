@@ -10,7 +10,7 @@ class AssetFull(
     count: Float,
     summaryProfit: Float,
     profitability: Float,
-    private val _dateFirstTransaction: Date,
+    private val _dateFirstTransaction: String,
     private val _lotSize: Int,
     private val _totalShares: Int,
     private val _averagePriceAtWholesalePosition: Float,
@@ -25,6 +25,7 @@ class AssetFull(
     private val _profitOnTransactions: Float,
     private val _amountOfDividends: Float,
     private val _commissions: Float,
+    private val _totalProfit:Float,
     private val _income: Float
 ) : AssetTable(
     imageResource,
@@ -36,7 +37,7 @@ class AssetFull(
     profitability
 ) {
 
-    val DateFirstTransaction: Date
+    val DateFirstTransaction: String
         get() = _dateFirstTransaction
     val LotSize: Int
         get() = _lotSize
@@ -64,6 +65,8 @@ class AssetFull(
         get() = _amountOfDividends
     val Commissions: Float
         get() = _commissions
+    val TotalProfit:Float
+        get() = _totalProfit
     val Income: Float
         get() = _income
 }

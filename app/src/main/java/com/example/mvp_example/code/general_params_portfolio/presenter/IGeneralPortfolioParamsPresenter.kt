@@ -9,4 +9,5 @@ import com.example.mvp_example.code.general_params_portfolio.view.IGeneralPortfo
 
 interface IGeneralPortfolioParamsPresenter: IBasePresenter {
     public fun attachView(view: IGeneralPortfolioParamsView);
+    public fun onViewLoaded();
 }

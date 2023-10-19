@@ -1,7 +1,7 @@
 package com.example.mvp_example.code.full_asset_info.model.objects
 
-class AssetFullDrawable class DrawableAssetFull(
-    private val _imageResource: String,
+class AssetFullDrawable(
+    private val _imageResource: Int,
     private val _fullName: String,
     private val _shortName: String,
     private val _count: String,
@@ -26,80 +26,83 @@ class AssetFullDrawable class DrawableAssetFull(
     private val _amountOfDividends: String,
     private val _commissions: String,
     private val _income: String,
+    private val _incomeColor:String
 ) {
+    val IncomeColor: String
+        get() = _incomeColor;
 
-    val imageResource: String
+    val ImageResource: Int
         get() = _imageResource
 
-    val fullName: String
+    val FullName: String
         get() = _fullName
 
-    val shortName: String
+    val ShortName: String
         get() = _shortName
 
-    val count: String
+    val Count: String
         get() = _count
 
-    val currentPrise: String
+    val CurrentPrise: String
         get() = _currentPrise
 
-    val summaryProfit: String
+    val SummaryProfit: String
         get() = _summaryProfit
 
-    val profitability: String
+    val Profitability: String
         get() = _profitability
 
-    val dateFirstTransaction: String
+    val DateFirstTransaction: String
         get() = _dateFirstTransaction
 
-    val lotSize: String
+    val LotSize: String
         get() = _lotSize
 
-    val totalShares: String
+    val TotalShares: String
         get() = _totalShares
 
-    val averagePriceAtWholesalePosition: String
+    val AveragePriceAtWholesalePosition: String
         get() = _averagePriceAtWholesalePosition
 
-    val plForDay: String
+    val PlForDay: String
         get() = _plForDay
 
-    val plForDayColor: String
+    val PlForDayColor: String
         get() = _plForDayColor
 
-    val currentValue: String
+    val CurrentValue: String
         get() = _currentValue
 
-    val costOfPurchases: String
+    val CostOfPurchases: String
         get() = _costOfPurchases
 
-    val salesValue: String
+    val SalesValue: String
         get() = _salesValue
 
-    val categoryShare: String
+    val CategoryShare: String
         get() = _categoryShare
 
-    val portfolioShare: String
+    val PortfolioShare: String
         get() = _portfolioShare
 
-    val currentProfit: String
+    val CurrentProfit: String
         get() = _currentProfit
 
-    val profitOnTransactions: String
+    val ProfitOnTransactions: String
         get() = _profitOnTransactions
 
-    val amountOfDividends: String
+    val AmountOfDividends: String
         get() = _amountOfDividends
 
-    val commissions: String
+    val Commissions: String
         get() = _commissions
 
-    val income: String
+    val Income: String
         get() = _income
 
-    val totalProfitColor: String
+    val CurrentProfitColor: String
         get() = _currentProfitColor
 
-    val summaryProfitColor: String
+    val SummaryProfitColor: String
         get() = _summaryProfitColor
 }
