@@ -22,7 +22,7 @@ class PortfolioMenuView : AppCompatActivity() {
         ).commit()
 
         supportFragmentManager.beginTransaction().replace(
-            R.id.asset_table,
+            R.id.assets_table,
             AssetTableView.newInstance()
         ).commit()
     }

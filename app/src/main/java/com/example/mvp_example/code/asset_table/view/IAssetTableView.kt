@@ -1,6 +1,8 @@
 package com.example.mvp_example.code.asset_table.view
 
+import com.example.mvp_example.code.asset_table.model.objects.AssetTableDrawable
+
 interface IAssetTableView {
-    public fun RenderTable(views:Array<AssetTableView>);
+    public fun renderTable(views:Array<AssetTableDrawable>);
 
 }
