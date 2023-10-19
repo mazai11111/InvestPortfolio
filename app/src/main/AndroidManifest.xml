@@ -13,9 +13,11 @@
         android:theme="@style/Theme.Mvpexample"
         tools:targetApi="31">
         <activity
+            android:name=".code.full_asset_info.View.FullAssetInfoView"
+            android:exported="false" />
+        <activity
             android:name=".code.portfolio_menu.view.PortfolioMenuView"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".code.entryPoint.view.EntryPointView"
             android:exported="true">
