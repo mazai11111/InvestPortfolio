@@ -2,9 +2,8 @@ package com.example.mvp_example.code.asset_table.model
 
 import com.example.mvp_example.R
 import com.example.mvp_example.code.asset_table.model.objects.AssetTable
-import com.example.mvp_example.code.asset_table.view.IAssetTableView
 
-class AssetTableStubModel: IAssetTableModel {
+class CryptoTableModel: IAssetTableModel {
     override fun takeData(): ArrayList<AssetTable> {
         val items: ArrayList<AssetTable> = arrayListOf(
             AssetTable(R.drawable.btc, "Bitcoin", "BTC", 0.0352f, 2764120.04f, 36778.85f, 111.89f),

@@ -17,8 +17,13 @@ import com.example.mvp_example.databinding.FragmentAssetTableBinding
 import org.koin.android.ext.android.inject
 
 class AssetTableView : Fragment(), IAssetTableView {
-    lateinit var _layout: FragmentAssetTableBinding;
-    private val _presenter: IAssetTablePresenter by inject<IAssetTablePresenter>()
+    private lateinit var _layout: FragmentAssetTableBinding;
+
+    private var _tableViews: ArrayList<View> = arrayListOf();
+    private val _presenter: IAssetTablePresenter by inject<IAssetTablePresenter>();
+
+    public val Presenter:IAssetTablePresenter
+        get() = _presenter;
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +36,7 @@ class AssetTableView : Fragment(), IAssetTableView {
     }
 
     override fun onStart() {
-        super.onStart()
+        super.onStart();
 
         initPresenter();
     }
@@ -41,10 +46,18 @@ class AssetTableView : Fragment(), IAssetTableView {
             AssetTableView()
     }
 
-    override fun renderTable(views: List<AssetTableDrawable>) {
+    override fun renderNewTable(views: List<AssetTableDrawable>) {
         _layout.apply {
             val tableLayout: TableLayout = assetTable
+
+            tableLayout.removeAllViews()
+
+            val firstRow:TableRow = _layout.firstRow
+            //val firstRow = layoutInflater.inflate(R.layout.first_asser_row, null) as TableRow
+            tableLayout.addView(firstRow)
+
             for (view in views) {
+
                 val tableRow = layoutInflater.inflate(R.layout.asser_row, null) as TableRow
                 tableRow.setBackgroundColor(Color.parseColor(view.ColorBg))
 
@@ -65,17 +78,22 @@ class AssetTableView : Fragment(), IAssetTableView {
 
                 val summaryProfitAsset: TextView = tableRow.findViewById(R.id.sum_profit_asset)
                 summaryProfitAsset.text = view.SummaryProfit
+                summaryProfitAsset.setTextColor(Color.parseColor(view.Color));
 
                 val profitabilityPercentAsset: TextView = tableRow.findViewById(R.id.profitability_percent_asset)
                 profitabilityPercentAsset.text = view.Profitability
+                profitabilityPercentAsset.setTextColor(Color.parseColor(view.Color));
 
                 tableLayout.addView(tableRow)
+                _tableViews.add(tableLayout);
             }
         }
     }
 
+
     private fun initPresenter(){
         _presenter.attachView(this);
+
         _presenter.onViewLoaded();
     }
 

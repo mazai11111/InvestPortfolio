@@ -9,9 +9,9 @@ public final class ViewConvertor {
             val loseColor = "#EE3870";
 
             if (value >= 0)
-                return loseColor;
+                return winColor;
 
-            return winColor;
+            return loseColor;
         }
     }
 }

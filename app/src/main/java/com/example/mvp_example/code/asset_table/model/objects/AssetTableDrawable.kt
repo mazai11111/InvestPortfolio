@@ -25,6 +25,8 @@ class AssetTableDrawable {
         get() = _summaryProfit;
     public val Profitability:String
         get() = _profitability;
+    public val Color:String
+        get() = _color;
     public val ColorBg:String
         get() = _colorBg;
 

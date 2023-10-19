@@ -1,4 +1,4 @@
-package com.example.mvp_example.code.general_params_portfolio.DIContainer
+package com.example.mvp_example.code.general_params_portfolio.DI
 
 import com.example.mvp_example.code.general_params_portfolio.model.GeneralPortfolioParamsStubModel
 import com.example.mvp_example.code.general_params_portfolio.model.IGeneralPortfolioParamsModel
