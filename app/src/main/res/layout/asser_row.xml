@@ -17,7 +17,6 @@
             android:id="@+id/name_short_asset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
             android:text="BTC"
             android:textAlignment="viewStart"
             android:textColor="#0495D6"
@@ -27,8 +26,8 @@
 
         <ImageView
             android:id="@+id/image_asset"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:src="@drawable/btc"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +36,7 @@
             android:id="@+id/name_full_asset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
+            android:scaleX="0.8"
             android:text="Bitcoin"
             android:textAlignment="viewStart"
             android:textColor="#FFFFFF"

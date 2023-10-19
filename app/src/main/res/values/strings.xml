@@ -23,5 +23,5 @@
     <string name="count">Count</string>
     <string name="cur_prise">Cur.\nprise, $</string>
     <string name="sum_profit_dollar">Sum.\nprofit, $</string>
-    <string name="profitability_percent">Profitability,\n%</string>
+    <string name="profitability_percent">Profit.,\n%</string>
 </resources>
