@@ -4,7 +4,7 @@ class AssetTable {
     private val _imageResource: Int
     private val _fullName:String;
     private val _shortName:String;
-    private val _count:Int;
+    private val _count:Float;
     private val _currentPrise:Float;
     private val _summaryProfit:Float;
     private val _profitability:Float;
@@ -15,7 +15,7 @@ class AssetTable {
         get() = _fullName;
     public val ShortName:String
         get() = _shortName;
-    public val Count:Int
+    public val Count:Float
         get() = _count;
     public val CurrentPrise:Float
         get() = _currentPrise;
@@ -28,7 +28,7 @@ class AssetTable {
         imageResource: Int,
         fullName: String,
         shortName: String,
-        count: Int,
+        count: Float,
         currentPrise: Float,
         summaryProfit: Float,
         profitability: Float

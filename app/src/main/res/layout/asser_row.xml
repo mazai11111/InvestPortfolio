@@ -20,17 +20,17 @@
             android:layout_marginStart="2dp"
             android:text="BTC"
             android:textColor="#0495D6"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/image_asset"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toBottomOf="@+id/name_full_asset" />
 
         <ImageView
             android:id="@+id/image_asset"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@tools:sample/avatars"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/btc"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/btc" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/name_full_asset"
@@ -50,28 +50,31 @@
         android:id="@+id/count_asset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
         android:text="133"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/current_prise_asset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
         android:text="555$"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/sum_profit_asset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
         android:text="234234$"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/profitability_percent_asset"
@@ -80,6 +83,7 @@
         android:text="34%"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:textSize="14sp"
+        android:scaleX="0.8" />
 
 </TableRow>

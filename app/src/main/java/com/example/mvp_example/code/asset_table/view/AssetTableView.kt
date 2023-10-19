@@ -24,7 +24,6 @@ class AssetTableView : Fragment(), IAssetTableView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
         _layout = FragmentAssetTableBinding.inflate(layoutInflater);
 
@@ -33,6 +32,8 @@ class AssetTableView : Fragment(), IAssetTableView {
 
     override fun onStart() {
         super.onStart()
+
+        initPresenter();
     }
 
     companion object {
@@ -40,7 +41,7 @@ class AssetTableView : Fragment(), IAssetTableView {
             AssetTableView()
     }
 
-    override fun renderTable(views: Array<AssetTableDrawable>) {
+    override fun renderTable(views: List<AssetTableDrawable>) {
         _layout.apply {
             val tableLayout: TableLayout = assetTable
             for (view in views) {
@@ -50,8 +51,8 @@ class AssetTableView : Fragment(), IAssetTableView {
                 val picture: ImageView = tableRow.findViewById(R.id.image_asset)
                 picture.setImageResource(view.ImageResource)
 
-                val nameFullSsset: TextView = tableRow.findViewById(R.id.name_full_asset)
-                nameFullSsset.text = view.Fullname
+                val nameFullAsset: TextView = tableRow.findViewById(R.id.name_full_asset)
+                nameFullAsset.text = view.Fullname
 
                 val nameShortAsset: TextView = tableRow.findViewById(R.id.name_short_asset)
                 nameShortAsset.text = view.ShortName
@@ -71,5 +72,16 @@ class AssetTableView : Fragment(), IAssetTableView {
                 tableLayout.addView(tableRow)
             }
         }
+    }
+
+    private fun initPresenter(){
+        _presenter.attachView(this);
+        _presenter.onViewLoaded();
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        _presenter.detachView();
     }
 }

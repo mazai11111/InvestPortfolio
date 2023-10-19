@@ -10,4 +10,7 @@
     <color name="win_color">#8ED957</color>
     <color name="lose_color">#EE3870</color>
 
+    <color name="first_asser_bg">#2D3040</color>
+    <color name="second_asser_bg">#272B39</color>
+
 </resources>
