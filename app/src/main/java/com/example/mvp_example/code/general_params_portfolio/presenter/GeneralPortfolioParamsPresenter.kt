@@ -1,13 +1,12 @@
 package com.example.mvp_example.code.general_params_portfolio.presenter
 
-import android.util.Log
+import com.example.mvp_example.code.Utils.ViewConvertor.Companion.takeWinLoseColor
 import com.example.mvp_example.code.general_params_portfolio.model.IGeneralPortfolioParamsModel
 import com.example.mvp_example.code.general_params_portfolio.model.objects.DrawableGeneralPortfolioItem
 import com.example.mvp_example.code.general_params_portfolio.model.objects.DrawableGeneralUnderscorePortfolioItem
 import com.example.mvp_example.code.general_params_portfolio.model.objects.GeneralPortfolioItem
 import com.example.mvp_example.code.general_params_portfolio.model.objects.GeneralPortfolioItemProfitUnderscorePercent
 import com.example.mvp_example.code.general_params_portfolio.view.IGeneralPortfolioParamsView
-import kotlin.math.sign
 
 class GeneralPortfolioParamsPresenter(private val _model: IGeneralPortfolioParamsModel):
     IGeneralPortfolioParamsPresenter {
@@ -31,9 +30,6 @@ class GeneralPortfolioParamsPresenter(private val _model: IGeneralPortfolioParam
     }
 
     override fun attachView(view: IGeneralPortfolioParamsView) {
-        if (view == null)
-            return
-
         _view = view;
     }
 
@@ -42,21 +38,18 @@ class GeneralPortfolioParamsPresenter(private val _model: IGeneralPortfolioParam
     }
 
     private fun makeDrawable(item:GeneralPortfolioItemProfitUnderscorePercent):DrawableGeneralUnderscorePortfolioItem{
-        val winColor = "#8ED957";
-        val loseColor = "#EE3870";
+
+
 
         var amount:String = item.Amount.toString();
 
         var percentUnderscoreColor:String;
 
+        percentUnderscoreColor = takeWinLoseColor(item.ProfitPercent);
+
         amount = addSign(amount, item);
 
-        if (sign(item.ProfitPercent) == -1f){
-            percentUnderscoreColor = loseColor;
-        }
-        else{
-            percentUnderscoreColor = winColor;
-        }
+
 
         val view = DrawableGeneralUnderscorePortfolioItem(amount, item.ProfitPercent.toString(), percentUnderscoreColor);
 
