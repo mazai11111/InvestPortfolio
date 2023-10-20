@@ -19,7 +19,7 @@
             android:name=".code.portfolio_menu.view.PortfolioMenuView"
             android:exported="false" />
         <activity
-            android:name=".code.entryPoint.view.EntryPointView"
+            android:name=".code.entry_point.view.EntryPointView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
