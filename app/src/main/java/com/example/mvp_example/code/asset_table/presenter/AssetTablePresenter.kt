@@ -1,6 +1,5 @@
 package com.example.mvp_example.code.asset_table.presenter
 
-import android.util.Log
 import com.example.mvp_example.code.Utils.ViewConvertor.Companion.takeWinLoseColor
 import com.example.mvp_example.code.asset_table.model.AllAssetsTableStubModel
 import com.example.mvp_example.code.asset_table.model.BoundsTableModel
@@ -23,18 +22,18 @@ class AssetTablePresenter(private var _model: IAssetTableModel):IAssetTablePrese
     }
 
     public override fun attachView(view: IAssetTableView) {
+        if (_view != null)
+            return
+
         _view = view
     }
 
     public override fun onAllAssetsButtonClicked() {
-        Log.v("TEST1", "onAllAssetsButtonClicked")
         _model = AllAssetsTableStubModel();
         startViewProcess();
     }
 
     public override fun onStocksButtonClicked() {
-        Log.v("TEST1", "onStocksButtonClicked")
-
         _model = StocksTableModel();
         startViewProcess();
     }
@@ -92,6 +91,4 @@ class AssetTablePresenter(private var _model: IAssetTableModel):IAssetTablePrese
 
         return second;
     }
-
 }
-

@@ -30,6 +30,9 @@ class GeneralPortfolioParamsPresenter(private val _model: IGeneralPortfolioParam
     }
 
     override fun attachView(view: IGeneralPortfolioParamsView) {
+        if (_view != null)
+            return
+
         _view = view;
     }
 
@@ -38,9 +41,6 @@ class GeneralPortfolioParamsPresenter(private val _model: IGeneralPortfolioParam
     }
 
     private fun makeDrawable(item:GeneralPortfolioItemProfitUnderscorePercent):DrawableGeneralUnderscorePortfolioItem{
-
-
-
         var amount:String = item.Amount.toString();
 
         var percentUnderscoreColor:String;
@@ -48,8 +48,6 @@ class GeneralPortfolioParamsPresenter(private val _model: IGeneralPortfolioParam
         percentUnderscoreColor = takeWinLoseColor(item.ProfitPercent);
 
         amount = addSign(amount, item);
-
-
 
         val view = DrawableGeneralUnderscorePortfolioItem(amount, item.ProfitPercent.toString(), percentUnderscoreColor);
 

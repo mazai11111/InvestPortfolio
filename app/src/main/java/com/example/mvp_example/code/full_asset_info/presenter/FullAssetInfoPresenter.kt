@@ -10,6 +10,9 @@ class FullAssetInfoPresenter(private val _model:IFullAssetInfoModel): IFullAsset
     private var _view: IFullAssetInfoView? = null;
 
     override fun attachView(view: IFullAssetInfoView) {
+        if (_view != null)
+            return;
+
         _view = view;
     }
 
