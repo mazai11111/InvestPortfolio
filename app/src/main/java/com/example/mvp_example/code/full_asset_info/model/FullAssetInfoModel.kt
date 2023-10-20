@@ -2,8 +2,6 @@ package com.example.mvp_example.code.full_asset_info.model
 
 import com.example.mvp_example.R
 import com.example.mvp_example.code.full_asset_info.model.objects.AssetFull
-import com.example.mvp_example.code.full_asset_info.model.objects.AssetFullDrawable
-import java.util.Date
 
 
 class FullAssetInfoModel: IFullAssetInfoModel {

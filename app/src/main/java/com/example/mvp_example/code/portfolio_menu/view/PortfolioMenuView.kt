@@ -2,10 +2,6 @@ package com.example.mvp_example.code.portfolio_menu.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
 import com.example.mvp_example.R
 import com.example.mvp_example.code.asset_table.presenter.IAssetTablePresenter
 import com.example.mvp_example.code.asset_table.view.AssetTableView
