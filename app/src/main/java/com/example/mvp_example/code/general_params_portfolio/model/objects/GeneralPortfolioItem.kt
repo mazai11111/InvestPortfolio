@@ -1,26 +1,26 @@
 package com.example.mvp_example.code.general_params_portfolio.model.objects
 
 open class GeneralPortfolioItem {
-    private val _name:String;
-    private val _amount:Float;
-    private val _isPercent:Boolean;
+    private val _amountCost:Float;
+    private val _amountTotalProfit:Float;
+    private val _percent:Float;
 
-    public val Name:String
+    public val AmountCost:Float
         get() {
-            return _name;
+            return _amountCost;
         }
-    public val Amount:Float
+    public val AmountTotalProfit:Float
         get() {
-            return _amount;
+            return _amountTotalProfit;
         }
-    public val IsPercent:Boolean
+    public val Percent:Float
         get() {
-            return _isPercent;
+            return _percent;
         }
 
-    public constructor(name:String, amount:Float, isPercent:Boolean){
-        _name = name;
-        _amount = amount;
-        _isPercent = isPercent;
+    public constructor(amountCost:Float, amount:Float, percent:Float){
+        _amountCost = amountCost;
+        _amountTotalProfit = amount;
+        _percent = percent;
     }
 }

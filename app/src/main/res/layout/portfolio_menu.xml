@@ -4,24 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fefefe"
     tools:context=".code.portfolio_menu.view.PortfolioMenuView">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <Button
+            android:id="@+id/statistic_button"
+
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/button_main_menu"
+            android:gravity="bottom|right"
+            android:text="Статистика"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/navigation">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <FrameLayout
-            android:id="@+id/assets_table"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:text="Мой портфель"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        </FrameLayout>
-    </ScrollView>
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+            <FrameLayout
+                android:id="@+id/assets_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -32,12 +86,10 @@
         android:text="@string/portfolio"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
         android:id="@+id/general_params_container"
@@ -51,26 +103,5 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
     </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_background"
-        android:outlineProvider="none"
-
-        android:textSize="15sp"
-        app:compatShadowEnabled="false"
-        app:itemIconSize="30sp"
-
-        app:itemIconTint="@drawable/portfolio_navigation_button_selector"
-        app:itemTextColor="#CDCDCD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/general_params_container"
-        app:menu="@menu/portfolio_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

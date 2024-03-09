@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".code.deals_info.view.DealsInfoView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мои сделки"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Открытые"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_opened"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price_opened"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="В плюс"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_in_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price_in_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="В минус"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_in_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price_in_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

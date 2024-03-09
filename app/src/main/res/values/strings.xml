@@ -24,7 +24,7 @@
     <string name="cur_prise">Cur.\nprise, $</string>
     <string name="sum_profit_dollar">Sum.\nprofit, $</string>
     <string name="profitability_percent">Profit.,\n%</string>
-    
+
     <string name="date_of_first_transaction">Date of first transaction</string>
     <string name="lot_size">Lot size</string>
     <string name="total_shares">Total shares</string>
@@ -44,4 +44,13 @@
 
     <string name="income">Income</string>
     <string name="app_name_ultra">PIZZA5000</string>
+    <string name="transition"> - </string>
+    <string name="issuers">Эмитеты</string>
+    <string name="countries">Страны</string>
+    <string name="industry">Отрасли</string>
+    <string name="currencies">Валюты</string>
+    <string name="categories">категории</string>
+    <string name="brokers">Брокеры</string>
+    <string name="banks">банки</string>
+
 </resources>

@@ -1,12 +1,8 @@
 package com.example.mvp_example.code.asset_table.presenter
 
-import com.example.mvp_example.code.Utils.ViewConvertor.Companion.roundToDecimal
-import com.example.mvp_example.code.Utils.ViewConvertor.Companion.takeWinLoseColor
+import com.example.mvp_example.code.drawable_builder.DrawableDirector
 import com.example.mvp_example.code.asset_table.model.AllAssetsTableStubModel
-import com.example.mvp_example.code.asset_table.model.BoundsTableModel
-import com.example.mvp_example.code.asset_table.model.CryptoTableModel
 import com.example.mvp_example.code.asset_table.model.IAssetTableModel
-import com.example.mvp_example.code.asset_table.model.StocksTableModel
 import com.example.mvp_example.code.asset_table.model.objects.AssetTable
 import com.example.mvp_example.code.asset_table.model.objects.AssetTableDrawable
 import com.example.mvp_example.code.asset_table.view.IAssetTableView
@@ -34,21 +30,6 @@ class AssetTablePresenter(private var _model: IAssetTableModel):IAssetTablePrese
         startViewProcess();
     }
 
-    public override fun onStocksButtonClicked() {
-        _model = StocksTableModel();
-        startViewProcess();
-    }
-
-    public override fun onCryptoButtonClicked() {
-        _model = CryptoTableModel();
-        startViewProcess();
-    }
-
-    public override fun onBoundsButtonClicked() {
-        _model = BoundsTableModel();
-        startViewProcess();
-    }
-
     private fun startViewProcess(){
         val items:ArrayList<AssetTable> = _model.takeData();
 
@@ -60,36 +41,17 @@ class AssetTablePresenter(private var _model: IAssetTableModel):IAssetTablePrese
     private fun convertToDrawable(items:ArrayList<AssetTable>):ArrayList<AssetTableDrawable> {
         var views:ArrayList<AssetTableDrawable> = arrayListOf();
 
-        var count:Int = 0;
-
         for (item in items){
-            count += 1;
-
-            var colorView = takeWinLoseColor(item.SummaryProfit);
-            var bgColor = decideBackgroundColor(count);
 
             val view = AssetTableDrawable(item.ImageResource,
                 item.Fullname,
-                item.ShortName,
-                roundToDecimal(item.Count, 2).toString(),
-                roundToDecimal(item.CurrentPrise,3).toString(),
-                roundToDecimal(item.SummaryProfit, 3).toString(),
-                roundToDecimal(item.Profitability, 3).toString(),
-                colorView, bgColor)
+                DrawableDirector().ToNotColouredSimpleString(item.CurrentPrise),
+                DrawableDirector().ToStringColoured(item.SummaryProfit),
+                DrawableDirector().ToStringColouredPercent(item.Profitability))
 
             views.add(view);
         }
 
         return views;
-    }
-
-    private fun decideBackgroundColor(value:Int):String{
-        val first = "#2D3040"
-        val second = "#272B39"
-
-        if (value % 2 == 0)
-            return first;
-
-        return second;
     }
 }

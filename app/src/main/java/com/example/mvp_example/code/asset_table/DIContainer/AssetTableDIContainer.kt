@@ -11,7 +11,7 @@ val assetTableModule = module {
         AllAssetsTableStubModel()
     }
 
-    single<IAssetTablePresenter> {
+    factory<IAssetTablePresenter> {
         AssetTablePresenter(get())
     }
 }

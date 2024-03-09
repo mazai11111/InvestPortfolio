@@ -3,8 +3,6 @@ package com.example.mvp_example.code.asset_table.model.objects
 open class AssetTable {
     private val _imageResource: Int
     private val _fullName:String;
-    private val _shortName:String;
-    private val _count:Float;
     private val _currentPrise:Float;
     private val _summaryProfit:Float;
     private val _profitability:Float;
@@ -13,10 +11,6 @@ open class AssetTable {
         get() = _imageResource;
     public val Fullname:String
         get() = _fullName;
-    public val ShortName:String
-        get() = _shortName;
-    public val Count:Float
-        get() = _count;
     public val CurrentPrise:Float
         get() = _currentPrise;
     public val SummaryProfit:Float
@@ -27,16 +21,12 @@ open class AssetTable {
     public constructor(
         imageResource: Int,
         fullName: String,
-        shortName: String,
-        count: Float,
         currentPrise: Float,
         summaryProfit: Float,
         profitability: Float
     ) {
         this._imageResource = imageResource
         this._fullName = fullName
-        this._shortName = shortName
-        this._count = count
         this._currentPrise = currentPrise
         this._summaryProfit = summaryProfit
         this._profitability = profitability

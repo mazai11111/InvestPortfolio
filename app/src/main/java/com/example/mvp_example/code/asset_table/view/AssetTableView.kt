@@ -1,6 +1,5 @@
 package com.example.mvp_example.code.asset_table.view
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TableLayout
-import android.widget.TableRow
 import android.widget.TextView
 import com.example.mvp_example.R
 import com.example.mvp_example.code.asset_table.model.objects.AssetTableDrawable
 import com.example.mvp_example.code.asset_table.presenter.IAssetTablePresenter
-import com.example.mvp_example.code.full_asset_info.View.FullAssetInfoView
 import com.example.mvp_example.databinding.FragmentAssetTableBinding
 import org.koin.android.ext.android.inject
 
@@ -54,60 +52,35 @@ class AssetTableView : Fragment(), IAssetTableView {
 
             tableLayout.removeAllViews()
 
-            val firstRow:TableRow = _layout.firstRow
-            tableLayout.addView(firstRow)
-
-
             for (view in views) {
-                val tableRow = layoutInflater.inflate(R.layout.asser_row, null) as TableRow
+                val tableRow = layoutInflater.inflate(R.layout.asser_row, null) as LinearLayout
 
                 renderView(view, tableLayout, tableRow)
-
-                subImageToOpenAdditionalInfo(tableRow)
-
             }
         }
     }
 
-    private fun subImageToOpenAdditionalInfo(tableRow: TableRow){
-        val picture: ImageView = tableRow.findViewById(R.id.image_asset)
-        val nameFullAsset: TextView = tableRow.findViewById(R.id.name_full_asset)
-
-        //TO DO: unsub
-        picture.setOnClickListener {openAdditionalInfo(nameFullAsset.text.toString())}
-    }
-
-    private fun openAdditionalInfo(id:String){
-        var intent =  Intent(getActivity(), FullAssetInfoView::class.java);
-        intent.putExtra("itemId", id);
-        startActivity(intent)
-    }
-
-    private fun renderView(view:AssetTableDrawable, tableLayout: TableLayout, tableRow: TableRow){
-        tableRow.setBackgroundColor(Color.parseColor(view.ColorBg))
-
+    private fun renderView(view:AssetTableDrawable, tableLayout: TableLayout, tableRow: LinearLayout){
         val picture: ImageView = tableRow.findViewById(R.id.image_asset)
         picture.setImageResource(view.ImageResource)
 
         val nameFullAsset: TextView = tableRow.findViewById(R.id.name_full_asset)
         nameFullAsset.text = view.Fullname
 
-        val nameShortAsset: TextView = tableRow.findViewById(R.id.name_short_asset)
-        nameShortAsset.text = view.ShortName
-
-        val countAsset: TextView = tableRow.findViewById(R.id.count_asset)
-        countAsset.text = view.Count
-
         val currentPriseAsset: TextView = tableRow.findViewById(R.id.current_prise_asset)
-        currentPriseAsset.text = view.CurrentPrise
+        currentPriseAsset.text = view.CurrentPrise.GetValue()
 
         val summaryProfitAsset: TextView = tableRow.findViewById(R.id.sum_profit_asset)
-        summaryProfitAsset.text = view.SummaryProfit
-        summaryProfitAsset.setTextColor(Color.parseColor(view.Color));
+        summaryProfitAsset.text = view.SummaryProfit.GetValue()
+        summaryProfitAsset.setTextColor(Color.parseColor(view.SummaryProfit.GetColor()));
+
+        val transition: TextView = tableRow.findViewById(R.id.transition)
+        transition.setTextColor(Color.parseColor(view.SummaryProfit.GetColor()));
+
 
         val profitabilityPercentAsset: TextView = tableRow.findViewById(R.id.profitability_percent_asset)
-        profitabilityPercentAsset.text = view.Profitability
-        profitabilityPercentAsset.setTextColor(Color.parseColor(view.Color));
+        profitabilityPercentAsset.text = view.Profitability.GetValue()
+        profitabilityPercentAsset.setTextColor(Color.parseColor(view.Profitability.GetColor()));
 
         tableLayout.addView(tableRow)
         _tableViews.add(tableLayout);

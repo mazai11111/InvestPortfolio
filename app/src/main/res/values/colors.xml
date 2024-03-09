@@ -2,15 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue">#03A9F4</color>
+    <color name="blue">#FF5722</color>
 
-    <color name="start_background">#21232F</color>
-    <color name="end_background">#2C2E3E</color>
 
     <color name="win_color">#8ED957</color>
     <color name="lose_color">#EE3870</color>
-
-    <color name="first_asser_bg">#2D3040</color>
-    <color name="second_asser_bg">#272B39</color>
+    <color name="button_main_menu">#ececec</color>
 
 </resources>

@@ -6,18 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mvp_example.code.general_params_portfolio.model.objects.DrawableGeneralPortfolioItem
-import com.example.mvp_example.code.general_params_portfolio.model.objects.DrawableGeneralUnderscorePortfolioItem
-import com.example.mvp_example.code.general_params_portfolio.presenter.IGeneralPortfolioParamsPresenter
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.example.mvp_example.code.general_params_portfolio.ViewModel.GeneralPortfolioParamsViewModel
 import com.example.mvp_example.databinding.FragmentGeneralPortfolioParamsViewBinding
 
-import org.koin.android.ext.android.inject
 
-
-class GeneralPortfolioParamsView : Fragment(), IGeneralPortfolioParamsView {
+class GeneralPortfolioParamsView : Fragment(){
     private lateinit var _layout: FragmentGeneralPortfolioParamsViewBinding;
 
-    private val _presenter: IGeneralPortfolioParamsPresenter by inject<IGeneralPortfolioParamsPresenter>()
+    lateinit var _viewModel: GeneralPortfolioParamsViewModel
 
 
     override fun onCreateView(
@@ -27,55 +25,36 @@ class GeneralPortfolioParamsView : Fragment(), IGeneralPortfolioParamsView {
 
         _layout = FragmentGeneralPortfolioParamsViewBinding.inflate(layoutInflater);
 
+        _viewModel = ViewModelProvider(this).get(GeneralPortfolioParamsViewModel::class.java);
+
         return _layout.root
     }
 
     override fun onStart() {
-        super.onStart()
+        super.onStart();
+        _viewModel.AmountCost.observe(this, Observer {
+            _layout.amountCost.text = it.GetValue();
+            _layout.amountCost.setTextColor(Color.parseColor(it.GetColor()));
+        })
 
-        initPresenter();
+        _viewModel.AmountCost.observe(this, Observer {
+            _layout.transitionMainInfo.setTextColor(Color.parseColor(it.GetColor()));
+        })
+
+        _viewModel.AmountTotalProfit.observe(this, Observer {
+            _layout.amountTotalProfit.text = it.GetValue();
+            _layout.amountTotalProfit.setTextColor(Color.parseColor(it.GetColor()));
+        })
+
+        _viewModel.Percent.observe(this, Observer {
+            _layout.amountChangePercent.text = it.GetValue();
+            _layout.amountChangePercent.setTextColor(Color.parseColor(it.GetColor()));
+            _layout.transitionMainInfo.setTextColor(Color.parseColor(_viewModel.Percent.value?.GetColor()))
+        })
     }
 
     companion object {
         fun newInstance() =
             GeneralPortfolioParamsView()
-    }
-
-    private fun  initPresenter(){
-        if (_presenter == null)
-            return
-
-        _presenter.attachView(this);
-        _presenter.onViewLoaded();
-    }
-
-    override fun renderCostElement(view: DrawableGeneralPortfolioItem) {
-        _layout.amountCost.text = view.Amount;
-    }
-
-    override fun renderTotalProfitElement(view: DrawableGeneralUnderscorePortfolioItem) {
-        _layout.apply {
-            amountTotalProfit.text = view.Amount;
-            persentTotalProfit.text = view.UnderscoreAmount
-            persentTotalProfit.setTextColor(Color.parseColor(view.Color))
-        }
-    }
-
-    override fun renderProfitabilityElement(view: DrawableGeneralPortfolioItem) {
-        _layout.amountProfability.text = view.Amount;
-    }
-
-    override fun renderChangePerDayElement(view: DrawableGeneralUnderscorePortfolioItem) {
-        _layout.apply {
-            amountChangePerDay.text = view.Amount;
-            percentChangedPerDay.text = view.UnderscoreAmount
-            percentChangedPerDay.setTextColor(Color.parseColor(view.Color))
-        }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        _presenter.detachView();
     }
 }

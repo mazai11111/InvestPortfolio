@@ -5,7 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mvp_example.R
-import com.example.mvp_example.code.Base.IInitializable
+import com.example.mvp_example.code.base.IInitializable
 import com.example.mvp_example.code.entry_point.init.DIInitializable
 import com.example.mvp_example.code.portfolio_menu.view.PortfolioMenuView
 

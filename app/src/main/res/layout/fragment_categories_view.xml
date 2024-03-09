@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".code.categories.View.CategoriesView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/issuers_button"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_main_menu"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="@string/issuers"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/country_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_main_menu"
+                android:scaleY="1"
+                android:text="@string/countries"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/industry_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_main_menu"
+                android:scaleY="1"
+                android:text="@string/industry"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/currencies_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_main_menu"
+                android:scaleY="1"
+                android:text="@string/currencies"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bank_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_main_menu"
+                android:scaleY="1"
+                android:text="@string/banks"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/broker_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_main_menu"
+                android:scaleY="1"
+                android:text="@string/brokers"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/categories_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_main_menu"
+                android:scaleY="1"
+                android:text="@string/categories"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableLayout
+                        android:id="@+id/category_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TableLayout>
+                </FrameLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</FrameLayout>

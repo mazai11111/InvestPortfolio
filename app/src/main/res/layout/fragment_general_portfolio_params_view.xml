@@ -2,203 +2,63 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/amount_change_per_day"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".code.general_params_portfolio.view.GeneralPortfolioParamsView">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/amount_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999 999 999,99 $"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount_cost">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cost_handler"
-                android:layout_width="180dp"
-                android:layout_height="85dp"
-                android:background="#0A0D19">
+            <TextView
+                android:id="@+id/amount_total_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="60dp"
-                    android:background="@color/white"
-                    android:translationY="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:layout_editor_absoluteY="10dp" />
+            <TextView
+                android:id="@+id/transition_main_info"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/transition"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/amount_cost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="7dp"
-                    android:text="13 107 704.16 $"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/name_cost_handler" />
-
-                <TextView
-                    android:id="@+id/name_cost_handler"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/cost"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:background="#0A0D19"
-                android:translationX="5dp">
-
-                <TextView
-                    android:id="@+id/amount_total_profit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="7dp"
-                    android:text="4 047 838.09 $"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/name_total_profit" />
-
-                <TextView
-                    android:id="@+id/name_total_profit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/total_profit"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/persent_total_profit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="4dp"
-                    android:text="44.54  %"
-                    android:textColor="@color/win_color"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/amount_total_profit" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/amount_change_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="180dp"
-                android:layout_height="85dp"
-                android:background="#0A0D19"
-                android:translationY="5dp">
-
-                <TextView
-                    android:id="@+id/amount_profability"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="7dp"
-                    android:text="34.31 %"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/name_profability" />
-
-                <TextView
-                    android:id="@+id/name_profability"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/profitability"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="2dp"
-                    android:layout_height="60dp"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:translationY="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:layout_editor_absoluteY="10dp" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:background="#0A0D19"
-                android:translationX="5dp"
-                android:translationY="5dp">
-
-                <TextView
-                    android:id="@+id/percent_changed_per_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="4dp"
-                    android:text="-0.03 %"
-                    android:textColor="@color/lose_color"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/amount_change_per_day" />
-
-                <TextView
-                    android:id="@+id/amount_change_per_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="7dp"
-                    android:text="-3 939.17 $"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/name_change_per_day" />
-
-                <TextView
-                    android:id="@+id/name_change_per_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/change_per_day"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </LinearLayout>
 </FrameLayout>

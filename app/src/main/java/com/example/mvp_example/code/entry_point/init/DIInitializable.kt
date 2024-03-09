@@ -1,10 +1,9 @@
 package com.example.mvp_example.code.entry_point.init
 
 import android.content.Context
-import com.example.mvp_example.code.Base.IInitializable
+import com.example.mvp_example.code.base.IInitializable
 import com.example.mvp_example.code.asset_table.DIContainer.assetTableModule
-import com.example.mvp_example.code.full_asset_info.Dicontainer.fullAssetInfoModel
-import com.example.mvp_example.code.general_params_portfolio.DI.portfolioParamsModule
+import com.example.mvp_example.code.categories.DIContainer.categoriesModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext
@@ -22,8 +21,7 @@ class DIInitializable:IInitializable<Context> {
             modules(
                 listOf(
                     assetTableModule,
-                    portfolioParamsModule,
-                    fullAssetInfoModel
+                    categoriesModule
                 )
             )
         }
