@@ -8,9 +8,9 @@ class CategoriesStubCountryModel: ICategoriesModel {
         val items: ArrayList<CategoryValue> = arrayListOf(
             CategoryValue("Россия", 14.22f),
             CategoryValue("США", 7.10f),
-            CategoryValue("Германия", 3.49f),
-            CategoryValue("Нидерланды", 1.68f),
-            CategoryValue("Прочее", 0.14f),
+            CategoryValue("Китай", 5.92f),
+            CategoryValue("Великобритания", 2.88f),
+            CategoryValue("Испания", 1.24f)
             )
 
         return items;

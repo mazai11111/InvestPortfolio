@@ -74,8 +74,8 @@ class AssetTableView : Fragment(), IAssetTableView {
         summaryProfitAsset.text = view.SummaryProfit.GetValue()
         summaryProfitAsset.setTextColor(Color.parseColor(view.SummaryProfit.GetColor()));
 
-        val transition: TextView = tableRow.findViewById(R.id.transition)
-        transition.setTextColor(Color.parseColor(view.SummaryProfit.GetColor()));
+        //val transition: TextView = tableRow.findViewById(R.id.transition)
+        //transition.setTextColor(Color.parseColor(view.SummaryProfit.GetColor()));
 
 
         val profitabilityPercentAsset: TextView = tableRow.findViewById(R.id.profitability_percent_asset)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="main_menu_button" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/main_menu_button</item>
+        <item name="android:background">@drawable/gradient_background_main</item>
     </style>
 </resources>

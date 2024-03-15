@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ececec"
+    android:background="@color/pastel_orange"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -32,11 +32,11 @@
 
             <TextView
                 android:id="@+id/name_full_asset"
-                android:layout_width="101dp"
+                android:layout_width="148dp"
                 android:layout_height="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
-                android:text="Bitcoin"
+                android:text="Доллар к рублю"
                 android:textAlignment="viewStart"
                 android:textColor="#000000"
                 android:textSize="14sp"
@@ -48,7 +48,7 @@
     <LinearLayout
         android:id="@+id/right_container"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="end"
         android:orientation="vertical">
@@ -58,53 +58,56 @@
         <TextView
             android:id="@+id/current_prise_asset"
             android:layout_width="78dp"
-            android:layout_height="15dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:scaleX="1"
-            android:text="999 999,70 ₽"
+            android:text="91,7 ₽"
             android:textAlignment="textEnd"
             android:textColor="#000000"
             android:textSize="12sp"
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right|top|end"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/sum_profit_asset"
-                android:layout_width="64dp"
-                android:layout_height="16dp"
-                android:scaleX="1"
-                android:text="11 300,70₽"
-                android:textAlignment="textEnd"
-                android:textColor="#00CC0C"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/transition"
-                android:layout_width="7dp"
-                android:layout_height="16dp"
-                android:text="@string/transition"
-                android:textAlignment="center"
-                android:textColor="#00CC0C"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/profitability_percent_asset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX="1"
-                android:text="13,533"
-                android:textAlignment="viewStart"
-                android:textColor="#00CC0C"
-                android:textSize="12sp"
-                android:textStyle="bold" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/profitability_percent_asset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:text="1,7%"
+            android:textAlignment="viewStart"
+            android:textColor="#00CC0C"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sum_profit_asset"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:text="+3,20₽"
+            android:textAlignment="textEnd"
+            android:textColor="#00CC0C"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profitability_percent_asset2"
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:scaleX="1"
+            android:text="-"
+            android:textAlignment="viewStart"
+            android:textColor="#00CC0C"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
 </LinearLayout>

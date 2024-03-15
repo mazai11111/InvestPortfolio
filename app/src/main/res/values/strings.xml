@@ -3,54 +3,56 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="portfolio">Portfolio</string>
-    <string name="cost">Price</string>
-    <string name="total_profit">Total profit</string>
-    <string name="profitability">Profitability</string>
-    <string name="change_per_day">Change per day</string>
-    <string name="title_activity_entry_point_view">EntryPointView</string>
+    <string name="portfolio">Портфель</string>
+    <string name="cost">Цена</string>
+    <string name="total_profit">Общая прибыль</string>
+    <string name="profitability">Рентабельность</string>
+    <string name="change_per_day">Изменение за день</string>
+    <string name="title_activity_entry_point_view">Вход в приложение</string>
 
     <string name="loading">Loading</string>
 
-    <string name="profile_composition">Profile Composition</string>
-    <string name="stocks">Stocks</string>
-    <string name="cryptocurrency">Сrypto</string>
-    <string name="bonds">Bonds</string>
-    <string name="assets">Assets</string>
-    <string name="all_assets">All assets</string>
+    <string name="profile_composition">Состав портфеля</string>
+    <string name="stocks">Акции</string>
+    <string name="cryptocurrency">Криптовалюта</string>
+    <string name="bonds">Облигации</string>
+    <string name="assets">Активы</string>
+    <string name="all_assets">Все активы</string>
 
-    <string name="asset">Asset</string>
-    <string name="count">Count</string>
-    <string name="cur_prise">Cur.\nprise, $</string>
-    <string name="sum_profit_dollar">Sum.\nprofit, $</string>
-    <string name="profitability_percent">Profit.,\n%</string>
+    <string name="asset">Актив</string>
+    <string name="count">Количество</string>
+    <string name="cur_prise">Тек.\nцена, $</string>
+    <string name="sum_profit_dollar">Сум.\nприбыль, $</string>
+    <string name="profitability_percent">Прибыль,\n%</string>
 
-    <string name="date_of_first_transaction">Date of first transaction</string>
-    <string name="lot_size">Lot size</string>
-    <string name="total_shares">Total shares</string>
-    <string name="average_price_at_wholesale_position">Average price \nat wholesale position</string>
-    <string name="current_price">Current price</string>
-    <string name="pl_for_day">P/L for day</string>
-    <string name="current_value">Current value</string>
-    <string name="cost_of_purchases">Cost of purchases</string>
-    <string name="sales_value">Sales value</string>
-    <string name="category_share">Category share</string>
-    <string name="portfolio_share">Portfolio share</string>
 
-    <string name="current_profit">Current profit</string>
-    <string name="profit_on_transactions">Profit on transactions</string>
-    <string name="amount_of_dividends">Amount of dividends</string>
-    <string name="commissions">Commissions</string>
+    <string name="date_of_first_transaction">Дата первой транзакции</string>
+    <string name="lot_size">Размер лота</string>
+    <string name="total_shares">Всего акций</string>
+    <string name="average_price_at_wholesale_position">Средняя цена \nпо оптовой позиции</string>
+    <string name="current_price">Текущая цена</string>
+    <string name="pl_for_day">P/L за день</string>
+    <string name="current_value">Текущая стоимость</string>
+    <string name="cost_of_purchases">Стоимость покупок</string>
+    <string name="sales_value">Стоимость продаж</string>
+    <string name="category_share">Доля категории</string>
+    <string name="portfolio_share">Доля портфеля</string>
 
-    <string name="income">Income</string>
-    <string name="app_name_ultra">PIZZA5000</string>
+
+    <string name="current_profit">Текущая прибыль</string>
+    <string name="profit_on_transactions">Прибыль от сделок</string>
+    <string name="amount_of_dividends">Сумма дивидендов</string>
+    <string name="commissions">Комиссии</string>
+
+    <string name="income">Доход</string>
+    <string name="app_name_ultra">Mammoth</string>
     <string name="transition"> - </string>
     <string name="issuers">Эмитеты</string>
     <string name="countries">Страны</string>
     <string name="industry">Отрасли</string>
     <string name="currencies">Валюты</string>
-    <string name="categories">категории</string>
+    <string name="categories">Виды активов</string>
     <string name="brokers">Брокеры</string>
-    <string name="banks">банки</string>
+    <string name="banks">Банки</string>
 
 </resources>
