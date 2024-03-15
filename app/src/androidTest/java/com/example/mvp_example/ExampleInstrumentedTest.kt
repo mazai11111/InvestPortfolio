@@ -22,3 +22,4 @@ class ExampleInstrumentedTest {
         assertEquals("com.example.mvp_example", appContext.packageName)
     }
 }
+//

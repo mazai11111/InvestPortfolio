@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "mvp-example"
 include(":app")
+//
